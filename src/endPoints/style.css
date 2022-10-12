@@ -1,0 +1,276 @@
+:root {
+    --main: #277BC0;
+    --gold: #FFCB42;
+    --footer: #FFF4CF;
+    --title: #FFB200;
+    --darkBlue: #293462;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 8rem;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    padding: 10px;
+    text-shadow: 3px 3px #D61C4E;
+}
+
+h2 {
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 50px;
+    padding: 20px;
+    color: var(--title)
+}
+
+img {
+    border-radius: 10px;
+    padding: 5px;
+    width: 300px;
+    height: 300px;
+}
+
+.imgLogo {
+    top: 10%;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border: 0px solid transparent;
+    border-radius: 0px;
+    padding: 10px 5px 5px 5px;
+}
+
+.imgDeco {
+    top: 30%;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border: 0px solid transparent;
+    border-radius: 0px;
+    padding: 10px 5px 5px 5px;
+}
+
+/*========================================= CUERPO =======================================*/
+
+.header {
+    display: flexbox;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 0px 0px 0px;
+    background-color: var(--main);
+    color: white;
+    width: 100%;
+}
+
+.subHeader {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.buttonRef {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    background-color: var(--darkBlue);
+    border: 2px solid black;
+    border-radius: 12px;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    width: 200px;
+    height: 50px;
+    margin: 25px;
+}
+
+.buttonRef:hover {
+    background-color: #47B5FF;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+/* ================= Seccion 2 ===================*/
+.randomCats {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+}
+
+.randomCats article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 310px;
+    height: 310px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.btnFavorites {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    width: auto;
+    font-size: 5rem;
+    opacity: 100%;
+    background-color: transparent;
+    border: 5px solid transparent;
+    color: transparent;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.btnFavorites:hover {
+    background-color: transparent;
+    color: var(--gold);
+    text-shadow: var(--main) 0px 5px 15px;
+
+}
+
+#uploadForm {
+    display: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#file {
+    position: absolute;
+    visibility: hidden;
+}
+
+#uploadCat {
+    border-radius: 12px 0px 0px 12px;
+    color: white;
+    background-color: var(--main);
+    padding: 30px 10%;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    transition-duration: 400ms;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#uploadCat span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+
+#uploadCat:hover {
+    padding: 35px 20%;
+    background-color: #032d4d3d;
+}
+
+#uploadCat i {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+.btnImport {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    background-color: var(--darkBlue);
+    border: 2px solid transparent;
+    border-radius: 0px 12px 12px 0px;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    width: 300px;
+    height: 100%;
+    transition-duration: 400ms;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.btnImport:hover {
+    background-color: #47B5FF;
+}
+
+
+/* ----------------- Seccion 3-------------*/
+.finalBox {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--footer);
+    justify-content: center;
+    align-items: center;
+}
+
+.finalBox h2 {
+    text-align: center;
+}
+
+.favouriteCat {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 30px 0px 0px 0px;
+    margin: 0px;
+    flex-direction: row;
+
+}
+
+.favouriteCat article {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.favouriteCat button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    background-color: var(--main);
+    /* Green */
+    border: 2px solid black;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    margin: 10px;
+    width: 200px;
+    height: 50px;
+}
+
+.favouriteCat button:hover {
+    background-color: #FFC54D;
+    color: var(--main);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

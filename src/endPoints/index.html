@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="./style.css">
+    <!--FUENTES  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Gemunu+Libre:wght@600&family=Nabla&family=Poppins:wght@300&family=Rubik:wght@600&display=swap"
+        rel="stylesheet">
+    <!--------------------------------------------------->
+    <script src="https://kit.fontawesome.com/a580e62678.js" crossorigin="anonymous"></script>
+    <title>CatsApp</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1><img src="./img/logo.png" class="imgLogo ">CatsApp</h1>
+        <div class="subHeader">
+            <button class="buttonRef" onclick="loadRandomCats()">
+                <i class="fa-solid fa-sync fa-spin"></i>
+                Recargar
+            </button>
+            <h2>Generador de gatos aleatorios</h2>
+        </div>
+    </div>
+
+    <span id="error"></span>
+
+    <section class="randomCats" id="randomCats">
+        <article>
+            <img id="img1" width="150" alt="Foto perro aleatorio">
+            <button class="btnFavorites" id="button1F">
+                <i class="fa-solid fa-heart-circle-plus fa-beat" style="--fa-animation-duration: 2s;"></i>
+            </button>
+        </article>
+        <article>
+            <img id="img2" width="150" alt="Foto perro aleatorio">
+            <button class="btnFavorites" id="button2F">
+                <i class="fa-solid fa-heart-circle-plus fa-beat" style="--fa-animation-duration: 2s;"></i>
+            </button>
+        </article>
+        <article>
+            <img id="img3" width="150" alt="Foto perro aleatorio">
+            <button class="btnFavorites" id="button3F"><i class="fa-solid fa-heart-circle-plus fa-beat"
+                    style="--fa-animation-duration: 2s;"></i></button>
+        </article>
+        <article>
+            <img id="img4" width="150" alt="Foto perro aleatorio">
+            <button class="btnFavorites" id="button4F"><i class="fa-solid fa-heart-circle-plus fa-beat"
+                    style="--fa-animation-duration: 2s;"></i></button>
+        </article>
+
+    </section>
+
+    <section class="randomCats">
+        <form id="uploadForm">
+        <label id="uploadCat">
+            <span>Importa la foto de tu gato </span><i class="fa-solid fa-cat"></i>
+            <input id="file" type="file" name="file" />
+        </label>
+        <button type="button" class="btnImport" onclick="uploadCatPhoto()"><i class="fa-solid fa-file-import"></i> Subir foto</button>
+        </form>
+    </section>
+
+
+    <div class="finalBox">
+        <h2>Tus Gatos favoritos <img src="./img/favs.png" class="imgDeco"></h2>
+
+        <section class="favouriteCat" id="favouriteCat">
+
+        </section>
+    </div>
+
+    <!-------------------------------- Scripts -------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./axios.js"></script>
+</body>
+
+</html>
